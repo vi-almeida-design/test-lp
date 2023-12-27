@@ -132,22 +132,29 @@ h3.benefícios_h3 {
 
 section.features{
     padding: 0 24px;
-    margin-bottom:15px;
+    margin-bottom:75px;
 }
 
 .secondary_features{
     display: block;
 }
 
+.features_secondary{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
 .features_secondary_card ,.features_secondary_card_last{
     background-color: white;
-    padding-top: 40px;
-    padding-right: 24px;
-    padding-left: 24px;
-    padding-bottom: 40px;
+    padding: 24px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     border-radius: 10px;
-    margin: 0px auto 60px;
-    max-width: 260px;
+    margin: 0px auto;
+    width:220px;
 
     box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
 }
@@ -155,38 +162,38 @@ section.features{
 /*features_icon é responsável pelo círculo que contém o ícone*/
 
 .features_icon_1 {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     background-color: #f5d4d4;
-    padding: 47px 47px;
+    padding: 35px 36px;
     margin: 0 auto 30px;
 }
 
 .features_icon_2 {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     background-color: #FFFFE2;
-    padding: 50px;
+    padding: 35px;
     margin: 0 auto 30px;
 }
 
 .features_icon_3 {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     background-color: #cfe5e3;
-    padding: 53px 46px;
+    padding: 35px;
     margin: 0 auto 30px;
 }
 
 .features_icon_4 {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     background-color: #f3d6f8;
-    padding: 45px 47px;
+    padding: 35px;
     margin: 0 auto 30px;
 }
 
@@ -195,7 +202,7 @@ section.features{
     color: var(--Black, #051114);
     text-align: center;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 37.5px */
@@ -209,11 +216,12 @@ section.features{
     font-weight: 400;
     line-height: 160%; /* 22.4px */
     margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .features_card_text img {
     display: block;
-    margin: 25px auto 0px;
+    margin: 0 auto;
 }
 
 .arrow_button:hover {
@@ -623,7 +631,6 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
 }
 
 .solid{
@@ -718,12 +725,25 @@ footer{
         justify-content: center;
         flex-wrap: wrap;
         margin: 0 auto;
-        gap: 30px;
         max-width: 320px;
+        gap:30px;
     }
 
     h1, p.header_text {
         max-width: 420px;
+    }
+
+    .features_secondary{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .features_secondary_card, .features_secondary_card_last {
+        margin-left: 0px;
+        margin-right:0px;
+        margin-bottom: 0px;
     }
 }
 
@@ -807,12 +827,15 @@ footer{
 
     .features_secondary{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
-        margin: 0 auto;
-        gap: 20px;
-        max-width: 620px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .features_secondary_card, .features_secondary_card_last {
+        margin-left: 0px;
+        margin-right:0px;
+        margin-bottom: 0px;
     }
 
     .user_review_cards{
@@ -833,7 +856,7 @@ footer{
     }
 }
 
-@media screen and (min-width: 700px) and (max-width:920px) {
+@media screen and (min-width: 780px) and (max-width:920px) {
 
     .header_content{
         display: flex;
@@ -849,7 +872,110 @@ footer{
     }
 
     footer {
-        padding: 75px 60px 75px 60px;
+        padding: 75px 48px 75px 48px;
+    }
+
+    #footer_logo{
+        display: block;
+        margin: 0px;
+        margin-bottom:30px;
+    }
+
+    #footer_intro{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .footer_links{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+        grid-template-areas: 
+        "a b c";
+        margin: 0 auto;
+    }
+
+    .footer_links_left{
+        grid-area: a;
+
+    }
+
+    .footer_links_right{
+        grid-area: b;
+
+    }
+
+    .footer_links_news{
+        grid-area: c;
+    }
+    
+    .footer_form {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 36px;
+    }
+
+    #footer_copyright{
+        text-align: left;
+    } 
+
+    .footer_logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 30px;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+
+    .features_secondary{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom:75px;
+    }
+
+    .features_secondary_card, .features_secondary_card_last {
+        margin-left: 0px;
+        margin-right:0px;
+        margin-bottom: 0px;
+    }
+
+
+
+    .pricing_card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .pricing_card_1{
+        margin:0px;
+    }
+
+    .user_review_cards{
+        display: flex;
+        flex-wrap:wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .user_review_box{
+        margin:0px;
+    }
+
+    .newsletter_section{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .newsletter_box{
+        margin:0px;
     }
 
 }
@@ -946,9 +1072,19 @@ footer{
     .features_secondary{
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .features_secondary_card {
+        margin-left: 0px;
+        margin-right:0px;
+        margin-bottom: 0px;
     }
 
     .features_secondary_card_last{
+        margin-left: 0px;
+        margin-right: 0px;
         margin-bottom: 0px;
     }
     
@@ -1133,9 +1269,19 @@ footer{
     .features_secondary{
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .features_secondary_card {
+        margin-left: 0px;
+        margin-right:0px;
+        margin-bottom: 0px;
     }
 
     .features_secondary_card_last{
+        margin-left: 0px;
+        margin-right: 0px;
         margin-bottom: 0px;
     }
     
